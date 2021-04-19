@@ -1,0 +1,57 @@
+.crshadow {
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  margin: 75px 100px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(0deg,#000,#262626);
+}
+
+.crshadow > h1 {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  right: 25%;
+  bottom: 25%;
+}
+
+.crshadow > h1 > i {
+  color: #5b0057;
+  font-size: 70px;
+}
+
+.crshadow:before, .crshadow:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  border-radius: 50%;
+  background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  background-size: 400%;
+  z-index: -1;
+  animation: cranimate 20s linear infinite;
+}
+
+.crshadow:after {
+  filter: blur(20px);
+}
+
+@keyframes cranimate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  75% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
